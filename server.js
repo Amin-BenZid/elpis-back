@@ -24,8 +24,8 @@ app.get("/api/", (req, res) => {
   res.send({ welcome: "welcome" });
 });
 
-app.use("/api/admin", adminRoute);
-app.use("/api/guest", guestRoute);
+app.use("/admin", adminRoute);
+app.use("/guest", guestRoute);
 
 mongoose
   .connect(process.env.URL)
